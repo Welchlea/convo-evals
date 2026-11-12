@@ -174,7 +174,7 @@ Run the tests with `pytest`.
 
 Brightwater Pensions is made up. No real customer data, client content or company material is used anywhere in this project.
 
-Built with AI pair programming. The test design, checks and example content are the part I care about: they show how I define and test what a good reply looks like.
+The test design, checks and example content show how I define and test what a good reply looks like.
 
 ## Licence
 
