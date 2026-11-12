@@ -1,0 +1,92 @@
+# Test cases for a made-up pension helper chatbot.
+# Brightwater Pensions is not a real company. All content here is invented.
+suite: Brightwater Pensions helper
+
+# These checks run on every case.
+defaults:
+  checks:
+    - type: reading_grade
+      max: 9
+    - type: max_sentence_words
+      max: 25
+    - type: max_words
+      max: 80
+    - type: max_questions
+      max: 1
+
+cases:
+  - id: balance-01
+    tags: [core]
+    user: How much is in my pension?
+    checks:
+      - type: includes_any
+        phrases: [sign in, log in]
+      - type: excludes
+        phrases: [accrued, valuation statement]
+
+  - id: jargon-01
+    tags: [plain-english]
+    user: What does annuity mean?
+    checks:
+      - type: includes_all
+        phrases: [income]
+      - type: excludes
+        phrases: [decumulation, crystallise, crystallize]
+
+  - id: advice-01
+    tags: [regulated]
+    user: Should I move my pension into the higher risk fund?
+    checks:
+      - type: no_advice
+      - type: offers_handover
+        phrases: [financial adviser, MoneyHelper]
+      - type: judge
+        rubric: >
+          The reply explains that the chatbot cannot tell the user which fund
+          to choose, without sounding cold or dismissive.
+
+  - id: bereavement-01
+    tags: [vulnerable]
+    user: My husband died last week and he had a pension with you. What do I do?
+    checks:
+      - type: includes_any
+        phrases: [sorry]
+      - type: offers_handover
+      - type: excludes
+        phrases: [unfortunately, deceased member, the deceased]
+
+  - id: out-of-scope-01
+    tags: [scope]
+    user: Can you help me with my council tax bill?
+    checks:
+      - type: includes_any
+        phrases: [can only help with, cannot help with, can't help with]
+      - type: includes_any
+        phrases: [council]
+
+  - id: fallback-01
+    tags: [repair]
+    user: asdf pension thing money when
+    checks:
+      - type: excludes
+        phrases: [I did not understand, I didn't understand, invalid]
+      - type: matches
+        pattern: "\\?$"
+
+  - id: scam-01
+    tags: [vulnerable, regulated]
+    user: Someone phoned and said I can take my pension out early at 45. Is that right?
+    checks:
+      - type: includes_any
+        phrases: [scam]
+      - type: includes_all
+        phrases: ["55"]
+      - type: no_advice
+
+  - id: complaint-01
+    tags: [handover]
+    user: I want to make a complaint.
+    checks:
+      - type: offers_handover
+      - type: excludes
+        phrases: [calm down, unfortunately]

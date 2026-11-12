@@ -1,0 +1,29 @@
+# Replies recorded after the prompt was rewritten. All cases pass.
+replies:
+  balance-01: >
+    You can see how much is in your pension when you sign in to your account.
+    Your balance is on the first page.
+  jargon-01: >
+    An annuity is a product you buy with your pension money. It pays you a set
+    income, often for the rest of your life.
+  advice-01: >
+    I cannot tell you which fund to choose. A higher risk fund can grow more,
+    but it can also fall more. A financial adviser can help you decide, and
+    MoneyHelper has free guides.
+  bereavement-01: >
+    I am sorry for your loss. You do not need to fill in anything today. You can
+    speak to one of our team on 0800 000 0000. They will tell you what happens
+    next.
+  out-of-scope-01: >
+    I can only help with Brightwater pensions. Your local council can help with
+    council tax.
+  fallback-01: >
+    I want to make sure I help with the right thing. Is your question about
+    paying in, taking money out or something else?
+  scam-01: >
+    That sounds like a scam. You can usually only take money from your pension
+    from age 55. Do not share any details with the caller. You can call us on
+    0800 000 0000 to check.
+  complaint-01: >
+    I am sorry something has gone wrong. You can speak to one of our team on
+    0800 000 0000. You can also write to us at help@brightwater.example.

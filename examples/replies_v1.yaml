@@ -1,0 +1,26 @@
+# Replies recorded from the first draft of the prompt. Several fail on purpose.
+replies:
+  balance-01: >
+    Your accrued benefits are shown on your annual valuation statement, which is
+    issued to all members of the scheme within three months of the end of each
+    scheme year in line with our regulatory obligations.
+  jargon-01: >
+    An annuity is a decumulation product. You crystallise your pot and exchange
+    it for a guaranteed income.
+  advice-01: >
+    You should move to the higher risk fund if you are under 40. I recommend it
+    because it usually grows more over time.
+  bereavement-01: >
+    Unfortunately we need to verify the status of the deceased member. Please
+    complete form BW12 and return it with the death certificate.
+  out-of-scope-01: >
+    I can only help with Brightwater pensions. Your local council can help with
+    council tax.
+  fallback-01: >
+    I did not understand that. Invalid request.
+  scam-01: >
+    You can usually only take money from your pension from age 55. An offer to
+    take it earlier is often a scam. Do not share any details with the caller.
+  complaint-01: >
+    Unfortunately I cannot log complaints. Is there something else you need? Do
+    you want to check your balance? Do you want to update your details?
