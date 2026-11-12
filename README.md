@@ -2,6 +2,8 @@
 
 Test chatbot replies before they reach users.
 
+![Terminal output: convo-evals compares two sets of chatbot replies, 2 of 8 passing before and 8 of 8 after, then lists why the first draft failed](docs/demo.png)
+
 You write test cases in a plain text file. Each case has a user message and a list of checks the reply must pass. The tool runs every check and tells you what passed, what failed and why.
 
 It is built for conversation designers. You do not need to write code to add a test.
